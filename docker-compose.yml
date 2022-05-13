@@ -2,6 +2,7 @@ version: '3.7'
 services:
   app-project:
     build: .
+    container_name: project-pilot
     ports:
       - 19000:19000
       - 19002:19002
