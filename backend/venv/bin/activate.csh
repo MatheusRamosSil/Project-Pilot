@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/media/matheus/1a402ed0-e615-46fb-a2ae-709990629d9f/matheus/Documentos/Django/apiNews/venv"
+setenv VIRTUAL_ENV "/media/matheus/1a402ed0-e615-46fb-a2ae-709990629d9f/matheus/Documentos/ReactNativeProjects/ProjectPilot/backend/venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

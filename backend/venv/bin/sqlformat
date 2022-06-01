@@ -1,4 +1,6 @@
-#!/media/matheus/1a402ed0-e615-46fb-a2ae-709990629d9f/matheus/Documentos/Django/apiNews/venv/bin/python3
+#!/bin/sh
+'''exec' /media/matheus/1a402ed0-e615-46fb-a2ae-709990629d9f/matheus/Documentos/ReactNativeProjects/ProjectPilot/backend/venv/bin/python3 "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

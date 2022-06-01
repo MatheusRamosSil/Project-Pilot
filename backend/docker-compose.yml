@@ -7,7 +7,7 @@ services:
     ports:
       - 8000:8000
     container_name: django_app_news
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000 
     depends_on:
       - db
   db:
@@ -33,4 +33,3 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=root
     ports:
       - "5050:80"
-
