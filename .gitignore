@@ -1,5 +1,5 @@
 ./backend/data
-vscode
+.vscode
 react-native/.expo
 react-native/node_modules
 backend/db.sqlite3
