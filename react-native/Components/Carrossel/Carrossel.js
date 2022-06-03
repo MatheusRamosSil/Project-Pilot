@@ -13,27 +13,27 @@ LogBox.ignoreLogs([
 const carrouselItems = [
     {
         title:'Aqui é o Titulo da materia',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo2',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo3',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo4',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo5',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo6',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
 
 ];
