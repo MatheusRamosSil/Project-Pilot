@@ -14,27 +14,27 @@ LogBox.ignoreLogs([
 const carrouselItems = [
     {
         title:'Titulo1',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo2',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo3',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo4',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo5',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
     {
         title:'Titulo6',
-        image:require('../../Assets/logo.png')
+        image:require('../../Assets/imagem640.jpg')
     },
 
 ];
@@ -45,7 +45,7 @@ function renderItem ({item}) {
     return(
        
             <View style = {styles.cardSegundo}>
-                <Image blurRadius={2} style = {styles.cardImageSegundo}source = {item.image} />
+                <Image blurRadius={3} style = {styles.cardImageSegundo}source = {item.image} />
                 <LinearGradient 
                 colors={['#9D9D9D', '#5B5B5B', '#2A2A2A']}
                 style = {styles.cardTitulo}>
