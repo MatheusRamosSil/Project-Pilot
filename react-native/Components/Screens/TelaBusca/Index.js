@@ -1,24 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React , { useState }from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import styles from './Style'
 
-export default function App() {
+
+export default function Busca() {
+
+  const [text,setText] = useState('')
   return (
-      <View style = {styles.container}>
-          <Text styles = {styles.title}> essa e a tela de busca</Text>
+    <View style={styles.container}>
+      <View style = {styles.view}>
+        <TextInput
+          style={styles.input}
+          placeholder='Pesquisar'
+          autoCorrect={true}
+          value={text}
+          onChangeText={(value)=>setText(value)}
+        />
+        <Ionicons
+          name="search"
+          size={50}
+          color="#000"
+          onPress={ () => {/*acionar api*/}}
+          />
       </View>
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-     title:{
-       fontSize:21,
-       color:'red',
-     },
-   
-});
