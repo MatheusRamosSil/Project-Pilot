@@ -1,3 +1,4 @@
+import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     logo:{
@@ -5,7 +6,7 @@ const styles = StyleSheet.create({
         width:150,
     },
     header:{
-        marginTop:0,
+        marginTop: 40,
         flex:1,
         flexDirection:'row',
         alignItems:'center',

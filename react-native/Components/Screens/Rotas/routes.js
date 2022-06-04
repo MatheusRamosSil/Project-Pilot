@@ -38,7 +38,8 @@ export default function Routes (){
             options={{
                 tabBarIcon:({ size, color}) => (
                     <Ionicons name="home" size={size} color={color} />
-                )
+                ),
+                headerShown:false
             }}
             />
 
@@ -48,7 +49,8 @@ export default function Routes (){
             options={{
                 tabBarIcon:({ size, color}) => (
                     <Ionicons name="search" size={size} color={color} />
-                )
+                ),
+                headerShown:false
             }}
             />
 
@@ -58,7 +60,8 @@ export default function Routes (){
             options={{
                 tabBarIcon:({ size, color}) => (
                     <Ionicons name="videocam" size={size} color={color} />
-                )
+                ),
+                headerShown:false
             }}
             />
             <Tab.Screen
@@ -67,7 +70,8 @@ export default function Routes (){
             options={{
                 tabBarIcon:({ size, color}) => (
                     <Ionicons name="person" size={size} color={color} />
-                )
+                ),
+                headerShown:false
             }}
             />
 
