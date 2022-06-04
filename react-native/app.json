@@ -3,11 +3,17 @@
     "name": "ProjectPilot",
     "slug": "ProjectPilot",
     "version": "1.0.0",
+    "icon": "./Assets/icon.png",
     "splash": {
       "image": "./Assets/splashscreen.png"
     },
     "assetBundlePatterns": [
       "**/*"
     ]
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./Assets/icon.png"
+    }
   }
 }
