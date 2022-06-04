@@ -1,9 +1,8 @@
 import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     logo:{
-        height:150,
+        height:100,
         width:150,
-        borderBottomRightRadius:30,
     },
     header:{
         marginTop:0,
@@ -11,8 +10,11 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
         marginBottom:15,
-        
       },
+    card:{
+        backgroundColor: "#d2d2d2",
+        borderRadius:30,
+      }
     });
 
 export default styles
