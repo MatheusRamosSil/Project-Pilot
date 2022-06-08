@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
       novaview:{
         alignItems:'center',
         textAlign:'center',
-        justifyContent:'start',
+        justifyContent:'center',
         marginBottom:80,
       },
       viewbotao:{
