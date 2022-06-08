@@ -1,30 +1,30 @@
 import React , { useState }from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { StyleSheet, TextInput, View, Text} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import styles from './Style'
+
+import { Container,Input } from '../../atoms';
+import { BarApp } from '../../mulecules';
+//import styles from './Style'
 
 
 export default function Busca() {
 
   const [text,setText] = useState('')
   return (
-    <View style={styles.container}>
-      <View style = {styles.view}>
-        <TextInput
-          style={styles.input}
-          placeholder='Pesquisar'
-          autoCorrect={true}
-          value={text}
-          onChangeText={(value)=>setText(value)}
-        />
-        <Ionicons
-          name="search"
-          size={50}
-          color="#000"
-          onPress={ () => {/*acionar api*/}}
-          />
-      </View>
-    </View>
+    <Container align="flex-start" justify="flex-start">
+      <BarApp item={{title:'Explore the World'}}/>
+      <Input/>
+    </Container>
+    
   );
 }
 
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+});

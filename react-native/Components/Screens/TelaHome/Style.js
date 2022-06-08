@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     title:{
-      fontSize:38,
-      fontFamily:'serif',
+      fontSize: 30,
+      fontFamily:'Roboto_500Medium',
       textAlign:'left',
       textTransform:'capitalize',
       paddingHorizontal:20,

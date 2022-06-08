@@ -15,11 +15,12 @@ services:
     image: postgres
     restart: always
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - ./data/db:/var/lib/postgresql/pgdata
     environment:
       - POSTGRES_DB=app_news
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
+      - PGDATA=/var/lib/pg_data
     ports:
       - "5432:5432"
 

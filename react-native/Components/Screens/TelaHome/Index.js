@@ -5,18 +5,21 @@ import styles from './Style'
 import Header from '../../Header/Header'
 import Carrossel from '../../Carrossel/Carrossel'
 import SegundoCarrossel from '../../CarrosselMenor/CarrosselMenor'
+
+import {FieldText} from '../../atoms/Text';
+
 export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
         <Header/>
-        <Text style={styles.title}>Noticias Destaques</Text>
+        <FieldText fontFamily="semi_bold" size={28} mt={8}>Noticias Destaques</FieldText>
         <Carrossel/>
-        <Text style={styles.title}>Últimas Noticias</Text>
+        <FieldText fontFamily="semi_bold" size={28} mt={8}>Últimas Noticias</FieldText>
         <SegundoCarrossel/>
-        <Text style={styles.title}>Moda</Text>
+        <FieldText fontFamily="semi_bold" size={28} mt={8}>Moda</FieldText>
         <SegundoCarrossel/>
-        <Text style={styles.title}>esporte</Text>
+        <FieldText fontFamily="semi_bold" size={28} mt={8}>esporte</FieldText>
         <SegundoCarrossel/>
       </ScrollView>
 
