@@ -1,10 +1,11 @@
 import { Module } from "../Module";
 import { ListContainer } from "../../atoms";
 import { FlatList } from 'react-native'
+import { ListModuleContainer } from "./style";
 
 export const ListModules = () =>{
     return(
-        <ListContainer>
+        <ListModuleContainer>
             <FlatList 
             
              data={[
@@ -15,7 +16,7 @@ export const ListModules = () =>{
               ]}
             
             renderItem={({ item }) =>  <Module item={{title:'Lorem ipsum dolor sit amet',image:item.key}}/>}/>
-        </ListContainer>
+        </ListModuleContainer>
         
     );
 }
