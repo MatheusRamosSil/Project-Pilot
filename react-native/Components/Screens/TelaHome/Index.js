@@ -7,19 +7,21 @@ import Carrossel from '../../Carrossel/Carrossel'
 import SegundoCarrossel from '../../CarrosselMenor/CarrosselMenor'
 
 import {FieldText} from '../../atoms/Text';
+import { Title } from '../../organism';
 
 export default function App() {
   return (
     <SafeAreaView>
       <ScrollView>
         <Header/>
-        <FieldText fontFamily="semi_bold" size={28} mt={8}>Noticias Destaques</FieldText>
+        <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}
+        >Noticias Destaques</FieldText>
         <Carrossel/>
-        <FieldText fontFamily="semi_bold" size={28} mt={8}>Últimas Noticias</FieldText>
+        <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Últimas Noticias</FieldText>
         <SegundoCarrossel/>
-        <FieldText fontFamily="semi_bold" size={28} mt={8}>Moda</FieldText>
+        <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Moda</FieldText>
         <SegundoCarrossel/>
-        <FieldText fontFamily="semi_bold" size={28} mt={8}>esporte</FieldText>
+        <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>esporte</FieldText>
         <SegundoCarrossel/>
       </ScrollView>
 

@@ -7,7 +7,8 @@ export const BarApp = ({item}) =>{
     return(
         <BarContainer>
              <Logo size="small" size2="large"/>
-             <FieldText fontFamily="extra_bold" size={28} mt={8}>{title}</FieldText>
+                <FieldText fontFamily="extra_bold" size={28} mt={16} ml={18} mb={8}
+                >{title}</FieldText>
         </BarContainer>
     ); 
    

@@ -2,8 +2,11 @@ import React , { useState }from 'react';
 import { StyleSheet, TextInput, View, Text} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-import { Container,Input } from '../../atoms';
-import { BarApp, Tag } from '../../mulecules';
+import { Container,Input} from '../../atoms';
+import { BarApp} from '../../mulecules';
+import { TagList,ListModules } from '../../organism';
+
+
 //import styles from './Style'
 
 
@@ -14,7 +17,8 @@ export default function Busca() {
     <Container align="flex-start" justify="flex-start">
       <BarApp item={{title:'Explore the World'}}/>
       <Input/>
-      <Tag mt={24} ml={14}>World</Tag>
+      <TagList/>
+      <ListModules/>
     </Container>
     
   );
