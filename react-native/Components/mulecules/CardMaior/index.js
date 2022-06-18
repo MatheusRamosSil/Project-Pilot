@@ -2,7 +2,7 @@ import { CardContainer, CardImage } from "./style";
 import React from "react";
 
 
-export const Card = ({item}) =>{
+export const CardMaior = ({item}) =>{
     return(
         <CardContainer>
             <CardImage source={{uri: item.image_url}}/>
