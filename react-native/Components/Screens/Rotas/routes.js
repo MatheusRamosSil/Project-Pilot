@@ -55,11 +55,11 @@ export default function Routes (){
             />
 
             <Tab.Screen
-            name = 'Videos'
+            name = 'Banca'
             component={Videos}
             options={{
                 tabBarIcon:({ size, color}) => (
-                    <Ionicons name="videocam" size={size} color={color} />
+                    <Ionicons name="library" size={size} color={color} />
                 ),
                 headerShown:false
             }}

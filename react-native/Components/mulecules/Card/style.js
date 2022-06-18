@@ -1,15 +1,17 @@
 import styled from "styled-components/native";
 
+
 export const CardContainer = styled.View`
-    width: ${({ theme }) => theme.metrics.px(98)}px;
-    height: ${({ theme }) => theme.metrics.px(98)}px;
-    border-radius: ${({ theme }) => theme.metrics.px(8)}px;
+    width: ${({ theme,wd }) => theme.metrics.px(wd || 98)}px;
+    height: ${({ theme,ht }) => theme.metrics.px(ht || 98)}px;
+    border-radius: ${({ theme,radius }) => theme.metrics.px( radius|| 8)}px;
     overflow: hidden;
    
 `
 
 
 export const CardImage = styled.ImageBackground`
-  width: 100%;
-  height: 100%;
+  width: ${({ theme,widthImage }) => theme.metrics.px(widthImage || 98)}px;
+  height: ${({ theme,heightImage }) => theme.metrics.px(heightImage || 98)}px;
 `
+

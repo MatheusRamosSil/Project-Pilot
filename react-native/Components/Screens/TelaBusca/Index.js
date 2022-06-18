@@ -15,21 +15,11 @@ export default function Busca() {
   const [text,setText] = useState('')
   return (
     <Container align="flex-start" justify="flex-start">
-      <BarApp item={{title:'Explore the World'}}/>
-      <Input/>
+      <BarApp item={{title:'Explore the World',mb:8}}/>
+      <Input placeholder="Buscar"/>
       <TagList/>
       <ListModules/>
     </Container>
     
   );
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});

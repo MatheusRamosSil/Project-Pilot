@@ -15,14 +15,17 @@ export const InputContainer = styled.View`
   margin-bottom: ${({ theme, mb }) => theme.metrics.px(mb || 15)}px;
   margin-left: ${({ theme, ml }) => theme.metrics.px(ml || 14)}px;
   margin-right: ${({ theme, mr }) => theme.metrics.px(mr || 14)}px;
+  flex-direction: row;
 `
 
 
-export const TextInput = styled.TextInput`
+export const TextInput = styled.TextInput.attrs(({theme}) => ({
+  placeholderTextColor: theme.colors.light,
+}))`
     height: 100%;
     width: 100%;
     margin-left:${({ theme }) => theme.metrics.px(14)}px;
-    font-family: ${({ theme }) => theme.fonts.light};
+    font-family: ${({ theme }) => theme.fonts.regular};
     color: ${({ theme }) => theme.colors.light};
     font-size: ${({ theme }) => theme.metrics.px(14)}px;
   `
