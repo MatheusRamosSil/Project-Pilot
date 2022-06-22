@@ -15,7 +15,7 @@ Mas se você prefere utilizar o emulador copie o link `exp://fp-36h.anonymous.ap
 
 ## Para rodar o backend
 Primeiro na pasta do projeto mude para a branch `develop` ,em seguida entre na pasta `backend`. Com terminal aberto, (lembrado que para usuarios do Windows é necessario abir o terminal do WLS), digite o seguinte comando:
-> sudo docker-compose rum --rm app django-admin startproject core .
+> sudo docker-compose run --rm app django-admin startproject core .
 
 Após esse comando, adicione:
 >sudo docker-compose build
