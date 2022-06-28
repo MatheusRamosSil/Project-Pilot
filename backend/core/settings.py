@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+byv1&j8x_4h&s^@gw(0#wjbtt^7iydg#rk-n(v8=0(2_r9jvz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0'] 
+ALLOWED_HOSTS = ['*'] 
 
 
 # Application definition
@@ -42,9 +42,13 @@ INSTALLED_APPS = [
     'news',
     'crud',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -79,6 +83,26 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+
+}
+
+'''
+Para fins de test de unidade
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+
+}
+
+
+DATABASES = {
   'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'app_news',
@@ -86,14 +110,6 @@ DATABASES = {
         'PASSWORD': 'root',
         'HOST': 'db',
         'PORT': '5432',
-    }
-}
-'''
-Para fins de test de unidade
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 '''

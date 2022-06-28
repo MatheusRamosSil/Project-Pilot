@@ -4,6 +4,7 @@ backports.zoneinfo==0.2.1
 certifi==2022.5.18.1
 charset-normalizer==2.0.12
 Django==4.0.4
+django-cors-headers==3.13.0
 djangorestframework==3.13.1
 idna==3.3
 iniconfig==1.1.1

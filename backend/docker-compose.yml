@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - .:/app
+      - ./ProjectPilot/backend:/djangoApp
     ports:
       - 8000:8000
     container_name: django_app_news

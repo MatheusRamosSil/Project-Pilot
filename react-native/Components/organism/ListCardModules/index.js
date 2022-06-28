@@ -34,7 +34,7 @@ const FAKE_DATA = [
 ];
 
 
-export const ListCardModules = () =>{
+export const ListCardModules = ({item}) =>{
 
     return(
         <ListModuleContainer>
@@ -42,7 +42,7 @@ export const ListCardModules = () =>{
              horizontal
              data={FAKE_DATA}
             
-            renderItem={({ item }) =>  <CardModules item={{title:item.title, image_url:item.image_url,logo_url:item.logo_url, url:item.url}}/>}/>
+            renderItem={ item  =>  <CardModules data={{item}}/>}/>
         </ListModuleContainer>
         
     );

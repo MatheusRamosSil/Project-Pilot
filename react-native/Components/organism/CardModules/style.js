@@ -6,8 +6,6 @@ export const CardContainers = StyleSheet.create({
         marginLeft:12,
         marginRight:2,
         marginTop:12,
-        borderWidth: 0.1,
-        borderRadius: 4,
         borderColor: '#ddd',
         borderBottomWidth: 0,
         shadowColor: '#000',
@@ -20,8 +18,8 @@ export const CardContainers = StyleSheet.create({
         height: 410,
     },
     widtContainer:{
-        width: 50,
-        height: 50,
+        width: 100,
+        
         margin: 12,
       },
 });
