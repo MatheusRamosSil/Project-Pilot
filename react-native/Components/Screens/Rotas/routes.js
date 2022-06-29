@@ -85,7 +85,7 @@ export default function Routes (){
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={BottomNavigation} />
+          <Stack.Screen options={{headerShown:false}} name="header" component={BottomNavigation} />
           <Stack.Screen name="Noticia" component={Noticia} />
         </Stack.Navigator>
     );
