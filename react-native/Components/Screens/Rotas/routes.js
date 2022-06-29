@@ -1,20 +1,19 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import {createStackNavigator} from '@react-navigation/stack'
 import { Ionicons } from '@expo/vector-icons';
 import Busca from '../TelaBusca/Index';
 import Perfil from '../TelaPerfil/Index';
 import Home from '../TelaHome/Index';
 import Videos from '../TelaVideos/Index';
-import noticia from '../../../componetes/tela de noticia/index'
+import Noticia from '../../../componetes/tela de noticia/index'
+import { NavigationContainer } from '@react-navigation/native';
 
 
-
-
-const Tab = createBottomTabNavigator();
-export default function Routes (){
+const BottomNavigation = () =>{
+    const Tab = createBottomTabNavigator();
     return(
-    
-            <Tab.Navigator 
+        <Tab.Navigator 
                 screenOptions={{
                     tabBarStyle:{
                         position:'absolute',
@@ -67,6 +66,7 @@ export default function Routes (){
                     headerShown:false
                 }}
                 />
+
                 <Tab.Screen
                 name = 'Perfil'
                 component={Perfil}
@@ -76,13 +76,18 @@ export default function Routes (){
                     ),
                     headerShown:false
                 }}
-                /> 
-                
-                <Tab.Screen name = 'noticia' component={noticia}/>
-               </Tab.Navigator>
-                
-
-           
-       
-    )
+                />    
+            </Tab.Navigator>
+    );
 }
+
+export default function Routes (){
+    const Stack = createStackNavigator();
+    return (
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={BottomNavigation} />
+          <Stack.Screen name="Noticia" component={Noticia} />
+        </Stack.Navigator>
+    );
+}
+       
