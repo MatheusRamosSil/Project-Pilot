@@ -1,0 +1,69 @@
+import { FieldText } from "../../atoms";
+import { TagContainer } from "./style";
+import React, { useEffect, useState } from 'react';
+import { useGetData } from "../../../services/hooks";
+import { Container, Input } from '../../atoms';
+import { BarApp } from '../../mulecules';
+import { TagList, ListModules } from '../../organism';
+
+export const Tag = ({ item }) => {
+
+    const { getCategory } = useGetData();
+    const [click, setClick] = useState(false)
+    const [category, setCategory] = useState('')
+    const [news, setNews] = useState([])
+
+
+    const callGetData = async (category) => {
+        const newsResponse = await getCategory(category)
+
+        if (!newsResponse.error) {
+            setNews(newsResponse)
+
+        }
+    }
+
+    useEffect(() => {
+        if (click) {
+            callGetData(category)
+            console.log(click)
+
+        }
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [click])
+
+    console.log(news.length)
+    const callNewsOfCategory = ({ item }) => {
+        setClick(true)
+        setCategory(item)
+    }
+
+
+    if (news.length > 0) {
+        return (   
+            <ListModules data={news} />
+        )
+
+    }
+    const renderPage = (news) => {
+        console.log({ news })
+        return (
+            <Container align="flex-start" justify="flex-start">
+                <BarApp item={{ title: 'Explore the World', mb: 8 }} />
+                <Input placeholder="Buscar" />
+                <TagList />
+                <ListModules data={news} />
+            </Container>
+        );
+    }
+    return (
+        <TagContainer mt={24} ml={14} onPress={() => {
+            callNewsOfCategory({ item: item.url })
+        }} >
+            <FieldText fontFamily="semi_bold" size={14} mt={8} mb={8} color={'white'}>{item.title}</FieldText>
+        </TagContainer>
+    );
+
+
+}

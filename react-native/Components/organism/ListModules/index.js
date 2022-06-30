@@ -10,7 +10,8 @@ export const ListModules = ({data}) =>{
             <FlatList 
             
              data={data}
-             renderItem={({item})  =>  <Module item={{...item}}/>}/>
+             renderItem={({item})  =>  <Module item={{...item}}/>}
+             />
         </ListModuleContainer>
         
     );
