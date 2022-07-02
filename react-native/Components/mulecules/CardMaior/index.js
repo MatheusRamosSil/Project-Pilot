@@ -5,7 +5,7 @@ import React from "react";
 export const CardMaior = ({item}) =>{
     return(
         <CardContainer>
-            <CardImage source={{uri: item.image_url}}/>
+            <CardImage source={{uri: item.urlToImage}}/>
         </CardContainer>
     );
 }
