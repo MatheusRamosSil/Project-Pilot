@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 
 export const CardContainers = StyleSheet.create({
     container: {
-        marginLeft:12,
+        marginLeft:6,
         marginRight:2,
         marginTop:12,
         borderColor: '#ddd',
@@ -15,7 +15,7 @@ export const CardContainers = StyleSheet.create({
         elevation: 1,
         overflow: 'hidden',
         width: 350,
-        height: 410,
+        height: 360,
     },
     widtContainer:{
         width: 100,

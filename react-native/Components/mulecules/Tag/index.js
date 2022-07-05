@@ -4,7 +4,6 @@ import { TagContainer } from "./style";
 export const Tag = ({ item}) => {
 
     const callNewsOfCategory = ({urlCategory}) => {
-       item.setClick(true)
        item.setCategory(urlCategory)
     }
 

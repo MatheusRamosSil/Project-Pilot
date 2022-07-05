@@ -5,6 +5,7 @@ export const Container = styled.View`
     flex-direction: ${({ dir }) => dir || 'column'};
     align-items: ${({ align }) => align || 'flex-start'};
     justify-content: ${({ justify }) => justify || 'flex-start'};
+    margin-top: ${({ theme, mt }) => theme.metrics.px(mt || 0)}px;
     width: ${({ theme, w }) => (w ? `${theme.metrics.px(w)}px` : '100%')};
     height: ${({ theme, h }) => (h ? `${theme.metrics.px(h)}px` : '100%')};
 `

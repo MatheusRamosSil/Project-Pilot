@@ -4,15 +4,15 @@ import { Range} from '../../atoms';
 import {Module} from '../../organism';
 
 
-export const CardModules = ({item}) =>{
-
+export const CardModules = ({data}) =>{
+  
     return(
         
         <View style={CardContainers.container}>
           
-               <Range item={{title:"",color:'white', marginTop:24, }}/>
-               <Module item={{...item}}/>
-               <Module item={{...item}}/>
+               <Range item={{title:data.newsName,color:'white', marginTop:24, }}/>
+               <Module item={{...data.data[0]}}/>
+               <Module item={{...data.data[1]}}/>
              
         </View>
     );

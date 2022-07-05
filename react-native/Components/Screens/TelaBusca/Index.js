@@ -3,79 +3,63 @@ import { BarApp } from '../../mulecules';
 import { TagList, ListModules } from '../../organism';
 import { useGetData } from "../../../services/hooks";
 import React, { useEffect, useState } from 'react';
-import { categoryNews } from '../../mulecules';
 
-//import styles from './Style'
 
 
 export default function Busca() {
 
-  const { getNews,getCategory } = useGetData()
+  const { searchGetNews } = useGetData()
   const [news, setNews] = useState([])
   const [click, setClick] = useState(false)
   const [category, setCategory] = useState('')
-  const [categoryNews, setCategoryNews] = useState([])
+  const [query, setQuery] = useState('')
+  
 
-  const callGetData = async () => {
-    const newsResponse = await getNews()
+  const callGetNews= async () => {
+    const newsResponse = await searchGetNews('category',category)
+    const result = await searchGetNews('search',query)
 
-    if (!newsResponse.error) {
-      setNews(newsResponse)
-
-    }
-  }
-
-  const callGetNewsCategory = async (categoria) => {
-    const newsResponse = await getCategory(categoria)
-    
-    if (!newsResponse.error) {
-      setCategoryNews(newsResponse)
+    if(!result.error) {
+      setNews([])
+      setNews(result)
       setClick(false)
+     
+    }
+
+    if (!newsResponse.error ) {
+      setNews([])
+      setNews(newsResponse)
+      setCategory('')
     }
   }
 
+
+  
   
   useEffect(() => {
 
-    if(click){
-      callGetNewsCategory(category)
-      console.log(click)
-      console.log(category)
+    if(click) {
+      callGetNews()
     }
 
-    callGetData()
-    
-   
+    else if(category.length > 0) {
+      callGetNews()
+    } 
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [click])
-
-
-  if (categoryNews.length > 0) {
-    return (
-      <Container align="flex-start" justify="flex-start">
-        <BarApp item={{ title: 'Explore the World', mb: 8 }} />
-        <Input placeholder="Buscar" />
-        <TagList setClick={setClick} setCategory={setCategory}/>
-        <ListModules data={categoryNews} />
-      </Container>
-    )
-
-  }else if(news.length > 0  && !click){
-    return (
-      <Container align="flex-start" justify="flex-start">
-        <BarApp item={{ title: 'Explore the World', mb: 8 }} />
-        <Input placeholder="Buscar" />
-        <TagList setClick={setClick} setCategory={setCategory}/>
-        <ListModules data={news} />
-      </Container>
-    )
-  }
+  }, [click,query,category])
 
   return (
     <Container align="flex-start" justify="flex-start">
       <BarApp item={{ title: 'Explore the World', mb: 8 }} />
-      <Input placeholder="Buscar" />
-      <TagList setClick={setClick} setCategory={setCategory} />
+      <Input 
+         onClick={setClick}
+         clickVariable ={click}
+          query={query}
+          setQuery={setQuery}
+          />
+      <TagList setCategory={setCategory} />
+      <ListModules data={news} />
     </Container>
 
   );
