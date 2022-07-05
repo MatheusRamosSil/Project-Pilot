@@ -16,20 +16,24 @@ import {React ,useEffect , useState} from 'react'
 import { useGetData } from "../../../services/hooks";
 
 export default function App() {
-  const {getNews} = useGetData()
+  const {getNews , searchGetNews} = useGetData()
   const [news, setNews] = useState([])
+  const [br, setBR] = useState([])
+  const [ua, setUA] = useState([])
+  const [jp, setJP] = useState([])
   const [loading, setLoading] = useState(true)
 
-
-  console.log({
-    loading,
-    news
-  })
-  const callGetData = async () =>{
+   const callGetData = async () =>{
       const newsResponse = await getNews()
+      const brResponse = await searchGetNews('country','br')
+      const uaResponse = await searchGetNews('country','ua')
+      const jpResponse = await searchGetNews('country','jp')
     
-      if(!newsResponse.error){
+      if(!newsResponse.error && !brResponse.error && !uaResponse.error && !jpResponse.error){
           setNews(newsResponse)
+          setBR(brResponse)
+          setUA(uaResponse)
+          setJP(jpResponse)
           setLoading(false)
          
       }
@@ -43,20 +47,22 @@ export default function App() {
 
   return (
     <SafeAreaView>
-      <ScrollView>
-        <Header/>
-        <Container flex-direction='column' >
-        <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}
-        >Noticias Destaques</FieldText>
-          <HomeList data={news}/>
-          <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Últimas Noticias</FieldText>
-          <HomeList data={news}/>
-          <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Moda</FieldText>
-          <HomeList data={news}/>
-          <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>esporte</FieldText>
-          <HomeList data={news}/>
-        </Container>
-      </ScrollView>
+      <Container flex-direction='column' >
+        <ScrollView>
+          <Header/>
+          
+          <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}
+          >Notícias Norte Americanas</FieldText>
+            <HomeList data={news}/>
+            <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Notícias do Brasil</FieldText>
+            <HomeList data={br}/>
+            <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Notícias Ucranianas</FieldText>
+            <HomeList data={ua}/>
+            <FieldText fontFamily="semi_bold" size={28} mt={18} ml={12} mb={18}>Notícias Japonesas</FieldText>
+            <HomeList data={jp} />
+          
+        </ScrollView>
+      </Container>
       <StatusBar style="light" backgroundColor='grey' hidden={false} translucent={true}/>
     </SafeAreaView>
   );
