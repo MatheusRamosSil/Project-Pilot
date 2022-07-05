@@ -2,8 +2,8 @@ import styled from 'styled-components/native'
 
 export const InputContainer = styled.View`
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: baseline;
+  justify-content: space-between;
   width: ${({ theme }) => theme.metrics.px(327)}px;
   height: ${({ theme }) => theme.metrics.px(42)}px;
   border-radius: ${({ theme }) => theme.metrics.px(24)}px;
@@ -22,10 +22,15 @@ export const InputContainer = styled.View`
 export const TextInput = styled.TextInput.attrs(({theme}) => ({
   placeholderTextColor: theme.colors.light,
 }))`
-    height: 100%;
-    width: 100%;
+   
     margin-left:${({ theme }) => theme.metrics.px(14)}px;
     font-family: ${({ theme }) => theme.fonts.regular};
     color: ${({ theme }) => theme.colors.light};
     font-size: ${({ theme }) => theme.metrics.px(14)}px;
   `
+
+export const ButtonsView = styled.View`
+  display: flex;
+  height: 100%;
+  
+`

@@ -34,14 +34,14 @@ const NAMES_TAGS=[
   ];
 
 
-export const TagList = ({setClick, setCategory}) =>{
+export const TagList = ({ setCategory}) =>{
 
     return(
         <ListContainer>
             <FlatList 
               horizontal
               data={NAMES_TAGS}
-              renderItem={({ item }) =>  <Tag item={{...item,setClick,setCategory}} />}/>
+              renderItem={({ item }) =>  <Tag item={{...item,setCategory}} />}/>
         </ListContainer>
         
     );
