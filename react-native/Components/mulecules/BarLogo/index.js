@@ -1,4 +1,3 @@
-import { Appbar, Text, View } from 'react-native-paper';
 import { Logo, FieldText } from '../../atoms';
 import { BarContainer } from './style';
 

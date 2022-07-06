@@ -1,7 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import { CardMaior } from '../../mulecules';
-import { Text } from '../../atoms';
 
 
 export const HomeList = ({data}) =>{
