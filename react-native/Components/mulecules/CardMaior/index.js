@@ -1,9 +1,7 @@
 import { CardContainer, GradientComponent, CardImage } from "./style";
-import React from "react";
 import { Linking } from 'react-native';
 import { colors } from "../../styles/colors";
 import { FieldText } from '../../atoms';
-import { theme } from "../../styles";
 
 export const CardMaior = ({ item }) => {
 
