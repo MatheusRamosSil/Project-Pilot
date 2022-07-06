@@ -7,5 +7,9 @@ export const HomeList = ({data}) =>{
     return <FlatList
     horizontal
     data={data}
-    renderItem={({item}) => <CardMaior item = {item} />}/>
+    renderItem={({item}) => <CardMaior item = {item} />}
+    toString
+    // keyExtractor={(item) => toString(item.id)}
+    
+    />
 }

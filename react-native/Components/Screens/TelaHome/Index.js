@@ -3,7 +3,7 @@ import { ScrollView } from 'react-native';
 import { FieldText } from '../../atoms/Text';
 import { Container } from '../../atoms';
 import { HomeList } from '../../organism';
-import  React, {useEffect, useState } from 'react'
+import { React, useEffect, useState } from 'react'
 import { BarApp } from '../../mulecules';
 import { useGetData } from "../../../services/hooks";
 
