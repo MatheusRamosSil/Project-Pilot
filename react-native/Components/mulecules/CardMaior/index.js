@@ -1,5 +1,6 @@
 import { CardContainer, GradientComponent, CardImage } from "./style";
 import React from "react";
+<<<<<<< HEAD
 import { Linking } from 'react-native';
 import { colors } from "../../styles/colors";
 import { FieldText } from '../../atoms';
@@ -17,6 +18,14 @@ export const CardMaior = ({ item }) => {
                 </GradientComponent>
             </CardImage>
 
+=======
+import { Linking } from 'react-native'
+
+export const CardMaior = ({item}) =>{
+    return(
+        <CardContainer onPress={ ()=> Linking.openURL(item.url)}>
+            <CardImage source={{uri: item.urlToImage}}/>
+>>>>>>> 3b7ec1bfad7f8aa8e3cf4fc661e2d62cdd30c290
         </CardContainer>
     );
 }
