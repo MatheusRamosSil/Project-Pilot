@@ -44,13 +44,11 @@ export default function App() {
     <Container align="flex-start" justify="flex-start">
 
       <ScrollView>
-        <BarApp item={{ title: '' }} />
-        <FieldText fontFamily="semi_bold" size={22} ml={24} mb={18}
-        >Noticias Destaques</FieldText>
+        <BarApp item={{ title: 'Noticias Destaques' }} />
         <HomeList data={news} />
-        <FieldText fontFamily="semi_bold" size={22} mt={80} ml={24} mb={18}>Negócios</FieldText>
+        <FieldText fontFamily="medium" size={28} mt={60} ml={24} >Negócios</FieldText>
         <HomeList data={news3} />
-        <FieldText fontFamily="semi_bold" size={22} mt={80} ml={24} mb={18}>Esporte</FieldText>
+        <FieldText fontFamily="medium" size={28} mt={60} ml={24} >Esporte</FieldText>
         <HomeList data={news2} />
       </ScrollView>
       <StatusBar style="light" backgroundColor='grey' hidden={false} translucent={true} />

@@ -64,17 +64,7 @@ export default function Routes (){
                 headerShown:false
             }}
             />
-            <Tab.Screen
-            name = 'Perfil'
-            component={Perfil}
-            options={{
-                tabBarIcon:({ size, color}) => (
-                    <Ionicons name="person" size={size} color={color} />
-                ),
-                headerShown:false
-            }}
-            />
-
+         
         </Tab.Navigator>
     )
 }

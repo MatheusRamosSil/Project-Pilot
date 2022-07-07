@@ -38,7 +38,7 @@ export default function App() {
       <ScrollView>
         <Container align="flex-start" justify="flex-start">
           <BarApp item={{ title: 'Banca' }} />
-          <FieldText fontFamily="medium" size={14} mt={0} ml={18} mb={0}
+          <FieldText fontFamily="medium" size={14} ml={18}  align={"center"}
           >Noticias dos principais jornais</FieldText>
           <ScrollView
             horizontal

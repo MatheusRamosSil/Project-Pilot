@@ -8,8 +8,5 @@ export const HomeList = ({data}) =>{
     horizontal
     data={data}
     renderItem={({item}) => <CardMaior item = {item} />}
-    toString
-    // keyExtractor={(item) => toString(item.id)}
-    
     />
 }
