@@ -1,4 +1,7 @@
 # Project-Pilot
+
+>Voce pode assistir o vídeo de demonstração de funcionalidades clicando [aqui](https://www.linkedin.com/posts/matheusramossil_um-pouco-atrasado-mas-nunca-%C3%A9-tarde-para-activity-6976511008580251650-ui8n?utm_source=share&utm_medium=member_desktop).
+
 ## Para executar o projeto com  o docker 
 Dentro da pasta do projeto, pelo terminal rode o comando:
 > docker-compose up
